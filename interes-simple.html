@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Interés Simple</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Interés Simple y Descuentos</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .calculator {
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .calculator h2 {
+      margin-top: 0;
+    }
+
+    .calculator p {
+      font-style: italic;
+    }
+
+    .calculator label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .calculator input,
+    .calculator button {
+      margin-bottom: 10px;
+    }
+
+    .calculator button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .calculator button:hover {
+      background-color: #45a049;
+    }
+
+    .calculator p.result {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Calculadora de Interés Simple y Descuentos</h1>
+
+  <!-- Calculadora de Valor Futuro -->
+  <div class="calculator">
+    <h2>Valor Futuro</h2>
+    <p>Formula: VF = P(1 + r * n)</p>
+    <label for="principal">Principal:</label>
+    <input type="number" id="principal" step="any">
+    <label for="interestRate">Tasa de Interés:</label>
+    <input type="number" id="interestRate" step="any">
+    <label for="periods">Periodos:</label>
+    <input type="number" id="periods" step="any">
+    <button id="btnValorFuturo">Calcular Valor Futuro</button>
+    <p id="valorFuturoResult"></p>
+  </div>
+
+  <!-- Calculadora de Valor Presente -->
+  
+  <div class="calculator">
+    <h2>Valor Presente</h2>
+    <p>Formula: VP = VF / (1 + r)^n</p>
+    <label for="futureValue">Valor Futuro:</label>
+    <input type="number" id="futureValue" step="any">
+    <label for="interestRatePV">Tasa de Interés:</label>
+    <input type="number" id="interestRatePV" step="any">
+    <label for="periodsPV">Periodos:</label>
+    <input type="number" id="periodsPV" step="any">
+    <button id="btnValorPresente">Calcular Valor Presente</button>
+    <p id="valorPresenteResult"></p>
+  </div>
+
+  <!-- Calculadora de Interés Simple -->
+  <div class="calculator">
+    <h2>Interés Simple</h2>
+    <p>Formula: IS = P * r * n</p>
+    <label for="capital">Capital:</label>
+    <input type="number" id="capital" step="any">
+    <label for="interestRateIS">Tasa de Interés:</label>
+    <input type="number" id="interestRateIS" step="any">
+    <label for="periodsIS">Periodos:</label>
+    <input type="number" id="periodsIS" step="any">
+    <button id="btnInteresSimple">Calcular Interés Simple</button>
+    <p id="interesSimpleResult"></p>
+
+    <!--calcular el tiempo-->
+    <div class="calculator">
+      <h2>Tiempo negociacion a interes simple</h2>
+      <p>Formula: n = 1/i [F/P - 1] </p>
+      <label for="capital">Capital:</label>
+      <input type="number" id="capital" step="any">
+      <label for="interestRateIS">Tasa de Interés:</label>
+      <input type="number" id="interestRateIS" step="any">
+      <label for="periodsIS">Periodos:</label>
+      <input type="number" id="periodsIS" step="any">
+      <button id="btnInteresSimple">Calcular Interés Simple</button>
+      <p id="interesSimpleResult"></p>
+    
+     
+      
+      <button onclick="window.history.back()">Regresar</button>
+     <script src="script.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora de Amortización Francesa</title>
+	<style>
+		/* Estilos para la calculadora */
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin: 0;
+		}
+
+		h1 {
+			color: #333;
+			margin: 20px;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 20px;
+		}
+
+		label {
+			margin-bottom: 10px;
+		}
+
+		input[type="number"] {
+			padding: 5px;
+			margin-bottom: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			width: 200px;
+			text-align: center;
+		}
+
+		button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+		button[type="submit"]:hover {
+			background-color: #0056b3;
+		}
+
+		table {
+			border-collapse: collapse;
+			margin-top: 20px;
+		}
+
+		th, td {
+			padding: 10px;
+			border: 1px solid #ccc;
+		}
+
+		th {
+			background-color: #f7f7f7;
+			font-weight: normal;
+		}
+	</style>
+</head>
+<body>
+    <div class="container" >
+	<h1>Calculadora de Amortización</h1>
+    <h2>Amortizacion Francesa</h2>
+	<div id="amortizacion-francesa">
+		<form onsubmit="calcularAmortizacionFrancesa(); return false;">
+			<label for="monto">Monto del préstamo:</label>
+			<input type="number" id="monto" required>
+			<label for="tasa">Tasa de interés anual (%):</label>
+			<input type="number" id="tasa" required>
+			<label for="plazo">Plazo del préstamo (en meses):</label>
+			<input type="number" id="plazo" required>
+			<button type="submit">Calcular Amortización Francesa</button>
+		</form>
+		<table id="tabla-amortizacion-francesa"></table>
+	</div>
+
+	<div id="amortizacion-alemana">
+		<h2>Amortización Alemana</h2>
+		<form onsubmit="calcularAmortizacionAlemana(); return false;">
+			<label for="monto-alemana">Monto del préstamo:</label>
+			<input type="number" id="monto-alemana" required>
+			<label for="tasa-alemana">Tasa de interés anual (%):</label>
+			<input type="number" id="tasa-alemana" required>
+			<label for="plazo-alemana">Plazo del préstamo (en meses):</label>
+			<input type="number" id="plazo-alemana" required>
+			<button type="submit">Calcular Amortización Alemana</button>
+		</form>
+		<table id="tabla-amortizacion-alemana"></table>
+	</div>
+
+	<div id="amortizacion-americana">
+		<h2>Amortización Americana</h2>
+		<form onsubmit="calcularAmortizacionAmericana(); return false;">
+		  <label for="monto-americana">Monto del préstamo:</label>
+		  <input type="number" id="monto-americana" required>
+		  <label for="tasa-americana">Tasa de interés anual (%):</label>
+		  <input type="number" id="tasa-americana" required>
+		  <label for="plazo-americana">Plazo del préstamo (en meses):</label>
+		  <input type="number" id="plazo-americana" required>
+		  <button type="submit">Calcular Amortización Americana</button>
+		</form>
+		<table id="tabla-amortizacion-americana"></table>
+	  </div>
+	  
+
+<button onclick="window.history.back()">Regresar</button>
+     <script src="script2.js"></script>
+	
+</body>
+</html>

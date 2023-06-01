@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Interés Simple</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Interés Simple y Descuentos</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .calculator {
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .calculator h2 {
+      margin-top: 0;
+    }
+
+    .calculator p {
+      font-style: italic;
+    }
+
+    .calculator label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .calculator input,
+    .calculator button {
+      margin-bottom: 10px;
+    }
+
+    .calculator button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .calculator button:hover {
+      background-color: #45a049;
+    }
+
+    .calculator p.result {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Calculadora de anualidades</h1>
+
+  <h3>Valor Presente de la Anualidad</h3>
+  <label for="cuota-presente">Cuota Anual:</label>
+  <input type="number" id="cuota-presente" step="any" required>
+  <label for="tasa-presente">Tasa de Interés Anual (%):</label>
+  <input type="number" id="tasa-presente" step="any" required>
+  <label for="plazo-presente">Plazo (años):</label>
+  <input type="number" id="plazo-presente" required>
+  <button onclick="calcularValorPresente()">Calcular Valor Presente</button>
+  <p id="resultado-presente"></p>
+
+  <h3>Valor Futuro de la Anualidad</h3>
+  <label for="cuota-futuro">Cuota Anual:</label>
+  <input type="number" id="cuota-futuro" step="any" required>
+  <label for="tasa-futuro">Tasa de Interés Anual (%):</label>
+  <input type="number" id="tasa-futuro" step="any" required>
+  <label for="plazo-futuro">Plazo (años):</label>
+  <input type="number" id="plazo-futuro" required>
+  <button onclick="calcularValorFuturo()">Calcular Valor Futuro</button>
+  <p id="resultado-futuro"></p>
+
+ 
+      <button onclick="window.history.back()">Regresar</button>
+     <script src="script3.js"></script>
+    </body>
+    </html>
